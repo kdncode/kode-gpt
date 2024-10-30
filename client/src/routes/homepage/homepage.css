@@ -20,7 +20,7 @@
   
       h1 {
         font-size: 128px;
-        background: linear-gradient(to right, #217bfe, #e55571);
+        background: linear-gradient(to right, #f8cf17, #e55571);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -39,7 +39,7 @@
       }
       a {
         padding: 15px 25px;
-        background-color: #217bfe;
+        background-color: #e55571;
         color: white;
         border-radius: 20px;
         font-size: 14px;
@@ -47,7 +47,7 @@
   
         &:hover {
           background-color: white;
-          color: #217bfe;
+          color: #e55571;
         }
       }
     }
@@ -102,7 +102,7 @@
           align-items: center;
           gap: 10px;
           padding: 20px;
-          background-color: #2c2937;
+          background-color: #2b375a;
           border-radius: 10px;
   
           @media screen and (max-width: 1024px) {

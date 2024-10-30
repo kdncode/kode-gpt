@@ -19,6 +19,13 @@
           width: 32px;
           height: 32px;
         }
+
+        span {
+          background: linear-gradient(to right, #f8cf17, #e55571);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
       }
     }
   

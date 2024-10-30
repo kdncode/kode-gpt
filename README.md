@@ -1,3 +1,3 @@
-# Kode AI GPT
+# Kode AI GPT with Google Gemini 1.5
 
-![Demo](demo.gif)
+![Demo](./client/public/demo.gif)

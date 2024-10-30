@@ -56,7 +56,7 @@ export const DashboardPage = () => {
       </div>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <input type="text" name="text" placeholder="Ask me anything..." />
+          <input type="text" name="text" placeholder="Message Kode GPT" />
           <button>
             <img src="/arrow.png" alt="" />
           </button>

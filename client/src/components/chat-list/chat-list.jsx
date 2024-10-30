@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import "./chat-list.css";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 
 export const ChatList = () => {
   const currentYear = new Date().getFullYear();
+
+  const [selectedChatId, setSelectedChatId] = useState(null);
+
+  const handleSelect = (chatId) => {
+    setSelectedChatId(chatId);
+  };
 
   const { isPending, error, data } = useQuery({
     queryKey: ["userChats"],
@@ -26,11 +33,18 @@ export const ChatList = () => {
           ? "Loading..."
           : error
           ? "Something went wrong!"
-          : data?.map((chat) => (
-              <Link to={`/dashboard/chats/${chat._id}`} key={chat._id}>
+          : Array.isArray(data)
+          ? data.map((chat) => (
+              <Link
+                to={`/dashboard/chats/${chat._id}`}
+                key={chat._id}
+                onClick={() => handleSelect(chat._id)}
+                className={selectedChatId === chat._id ? "selected" : ""}
+              >
                 {chat.title}
               </Link>
-            ))}
+            ))
+          : null}
       </div>
       <hr />
       <div className="upgrade">

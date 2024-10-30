@@ -29,12 +29,24 @@ export const NewPrompt = ({ data }) => {
         role: "model",
         parts: [{ text: "Hi there?" }],
       }
-      /* production */
-      // data?.history?.map(({ role, parts }) => ({
-      //   role,
-      //   parts: [{ text: parts[0].text }],
-      // })),
+    //   /* production */
+    //   data?.history?.map(({ role, parts }) => ({
+    //     role,
+    //     parts: [{ text: parts[0].text }],
+    //   })),
     ],
+    
+    /* Prod 2 */
+    // history:
+    //   data?.history?.length > 0
+    //     ? data.history.map(({ role, parts }) => ({
+    //         role,
+    //         parts:
+    //           parts?.length > 0 && parts[0]?.text
+    //             ? [{ text: parts[0].text }]
+    //             : [],
+    //       }))
+    //     : [],
     generationConfig: {
       // maxTurns: 5,
     },
@@ -136,7 +148,7 @@ export const NewPrompt = ({ data }) => {
         <form className="new-form" onSubmit={handleSubmit} ref={formRef}>
           <Upload setImg={setImg} />
           <input id="file" type="file" multiple={false} hidden />
-          <input id="text" name="text" placeholder="Ask me anything..." />
+          <input id="text" name="text" placeholder="Message Kode GPT" />
           <button>
             <img src="/arrow.png" alt="" />
           </button>
